@@ -1,37 +1,39 @@
 # Node.js Authentication System
 
-This project contains a complete authentication system using Node.js, Express, and MongoDB. It includes features like sign up, sign in, sign out, password reset, and social authentication (Google). The project is structured to be scalable with separate components for models, controllers, and routes.
+This project contains a complete authentication system using Node.js, Express, and MongoDB.  
+It includes features like sign up, sign in, sign out, password reset, and social authentication (Google).  
+The project is structured to be scalable with separate components for models, controllers, and routes.
 
-## Live Site
+---
+
+## 👤 Student Info
+- **Student ID:** 22724461  
+- **Full Name:** Do Cong Danh  
+
+> Student ID and Fullname are displayed on all website pages (see navigation bar).
+
+---
+
+## 🌍 Live Site
 [Click here](https://nodejs-authentication-system-l2pu.onrender.com/user/signin) to visit the live site.
 
-## Features Implemented
+---
+
+## ✨ Features Implemented
 - **Sign-up with Email**: Create an account using your email and password.
 - **Sign-in**: Log into your account securely.
 - **Sign Out**: Log out of your session.
-- **Reset Password**: You can reset your passwords after signing in.
-- **Encrypted Passwords**: Passwords are securely stored using encryption.
+- **Reset Password**: Change password after signing in.
+- **Forgot Password**: Request new password via email.
+- **Encrypted Passwords**: Passwords are securely hashed using bcrypt.
 - **Google Login/Signup**: Sign in or sign up using your Google account.
-- **Forgot Password**: Reset your password via email.
-- **Password Strength Validation**: Notifications are displayed for unmatching passwords during sign up and incorrect passwords during sign in.
 - **reCAPTCHA Integration**: Protects against bot traffic on sign up and login pages.
 
-## Environment Variables
+---
 
-Before running the application locally, ensure you have set up the following environment variables in a .env file located at the root of your project:
+## ⚙️ Environment Variables
 
-1. **PORT**: Specifies the port number the application listens on.
-2. **DB_URL**: MongoDB database connection URL.
-3. **CLIENT_ID**: Google OAuth client ID.
-4. **CLIENT_SECRET**: Google OAuth client secret (sign in with Google).
-5. **EMAIL**: Email address for sending emails.
-6. **PASSWORD**: App-specific password or regular password for the Gmail account.
-7. **RECAPTCHA_SECRET_KEY**: Google reCAPTCHA secret key.
-8. **CLIENT_URL**: URL to redirect after signing in with Google, e.g., "http://localhost:3000/auth/login/success".
-
-Ensure that you have the appropriate values for each variable before running the application.
-
-Example `.env` file:
+Create a `.env` file at the root with the following values:
 
 ```plaintext
 PORT=3000
@@ -44,65 +46,93 @@ RECAPTCHA_SECRET_KEY=your_recaptcha_secret_key
 CLIENT_URL=http://localhost:3000/auth/login/success
 ```
 
-## Folder
-  ```csharp
+---
+
+## 📂 Folder Structure
+
+```csharp
 node-authentication/
 ├── config/                  # Configuration files
-│   └── mongodb.js           # MongoDB configuration
-│
 ├── controllers/             # Controller logic
 ├── models/                  # Database models
 ├── routes/                  # Route definitions
-├── views/                   # EJS views
+├── views/                   # EJS templates (signup, signin, profile, etc.)
+├── public/                  # Static assets + results screenshots
+│   └── results/             # Test screenshots (signup.png, signin.png, etc.)
 ├── app.js                   # Express application setup
-│
-├── public/                  # Static assets
-│
-├── package.json             # NPM package configuration
+├── package.json             # Dependencies
 ├── README.md                # Project README file
-├── .gitignore               # Git ignore configuration
 └── .env                     # Environment variables file
-
 ```
 
-## Installation and Setup
+---
 
-Follow these steps to run the project locally:
+## 🚀 Installation and Setup
 
-
-1. Clone the repository to your local machine:
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/nodejs-authentication-system.git
-  
-2. Navigate into the project directory:
-   ```bash
-   cd node-authentication-system
-    ```
-3. Install dependencies:
+   git clonehttps://github.com/DanhSteve/NodeJS-Authentication-System.git
+   cd nodejs-authentication-system
+   ```
+
+2. Install dependencies:
+
    ```bash
    npm install
+   ```
 
-4. Start the server:
+3. Start the server:
+
    ```bash
    npm start
-5. Open your web browser and visit http://localhost:3000 to access the application.
+   ```
 
-## Dependencies required
+4. Open `http://localhost:3000/user/signin` in your browser.
 
-- Express.js
-- MongoDB
-- Passport.js
-- bcrypt
-- express-session
-- express-ejs-layouts
-- dotenv
-- nodemailer
+---
 
-## Credits
+## 📦 Dependencies
+
+* express
+* mongoose
+* passport
+* passport-google-oauth20
+* bcrypt
+* express-session
+* express-ejs-layouts
+* dotenv
+* nodemailer
+
+---
+
+## 🧪 Test Instructions (LAB Requirement)
+
+All features were tested either in **Browser** or **Postman**.
+Screenshots are saved inside `public/results/`.
+
+### Screenshots
+
+* **Signup** → 
+![Signup](public/results/signup.png)
+![Signup DB](public/results/signup_db.png)
+* **Signin** → ![Signin](public/results/signin.png)
+* **Homepage (after login)** → ![Homepage](public/results/homepage.png)
+* **Logout** → ![Logout](public/results/logout.png)
+* **Forgot Password** → 
+![Forgot Password](public/results/forgot_password.png)
+![Forgot Password](public/results/forgot_password_console.png)
+![Forgot Password](public/results/forgot_password_email.png)
+* **Change Password** → ![Change Password](public/results/change_password.png)
+
+---
+
+## 🙏 Credits
 
 This project was created by [Ravikant Singh](https://github.com/ravikantsingh12). Contributions via issues or pull requests are welcome!
 
 ## Follow me on
 
 - [LinkedIn](https://www.linkedin.com/in/ravikant-singh-327a98241)
+
+* Modified and completed by **Do Cong Danh**.
