@@ -135,6 +135,6 @@ This project was created by [Ravikant Singh](https://github.com/ravikantsingh12)
 
 ## Follow me on
 
-- [LinkedIn](https://www.linkedin.com/in/ravikant-singh-327a98241)
+- [LinkedIn](https://www.linkedin.com/in/ravikant-singh-327a98241).
 
 * Modified and completed by **Do Cong Danh**.
