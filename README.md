@@ -124,6 +124,8 @@ Screenshots are saved inside `public/results/`.
 ![Forgot Password](public/results/forgot_password_console.png)
 ![Forgot Password](public/results/forgot_password_email.png)
 * **Change Password** → ![Change Password](public/results/change_password.png)
+### Google Signin
+![Google Signin](public/results/google_signin.png)
 
 ---
 
